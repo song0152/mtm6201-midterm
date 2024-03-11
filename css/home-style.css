@@ -96,7 +96,7 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 38px
+    border-radius: 38px;
   }
 
   .welcome .learn{
@@ -115,7 +115,7 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 38px
+    border-radius: 38px;
   }
 
   .welcome .order:hover{
@@ -128,7 +128,7 @@
     color: aliceblue;
   }
 
-
+  /* Introduction part of the style, using the grid */
   .introduce {
     color: rgb(65, 65, 65);
   }
@@ -186,6 +186,7 @@
     grid-column: 2/3;
   }
 
+  /* purchase style */
   .purchase {
     position: relative;
     display: inline-block;
@@ -254,16 +255,17 @@
     border-radius: 38px
   }
 
-  .purchase .order:hover{
+  .purchase .card:hover{
     background-color: #619229;
     color: aliceblue;
   }
 
-  .purchase .learn:hover{
+  .purchase .paypal:hover{
     background-color: #619229;
     color: aliceblue;
   }
   
+  /* footer style */
   .footer {
     display: flex;
     align-items: center;
@@ -321,30 +323,25 @@
   }
 
   /* navbar style */
-  .nav {
-    display: flex;
-    align-items: center;
-    margin-left: 10%;
-  }
-
   .nav img {
     width: 115px;
+    margin-left: 60px;
   }
 
   .nav ul {
-      list-style-type: none;
-      margin-left: 50%;
-      padding: 0;
-      width: 60px;    
+    list-style-type: none;
+    overflow: hidden;
+    margin-right: 30px;
+    text-align: center;
   }
-
 
   .nav li a {
     display: block;
-    width: 30px;
+    padding: 30px;
     text-decoration: none;
     color: black;
   }
+
 
   .nav li a:hover {
     color: #619229;
@@ -359,7 +356,7 @@
 
   .welcome h1 {
     position: absolute;
-    top: 15%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -382,7 +379,7 @@
 
   .welcome .order{
     position: absolute;
-    top: 45%;
+    top: 55%;
     left: 35%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -401,7 +398,7 @@
 
   .welcome .learn{
     position: absolute;
-    top: 45%;
+    top: 55%;
     left: 65%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -428,7 +425,7 @@
     color: aliceblue;
   }
 
-
+ /* Introduction part of the style, using the grid */
   .introduce {
     color: rgb(65, 65, 65);
   }
@@ -485,6 +482,7 @@
     grid-column: 2/3;
   }
 
+  /* purchase style */
   .purchase {
     position: relative;
     display: inline-block;
@@ -563,6 +561,8 @@
     color: aliceblue;
   }
   
+
+  /* footer style */
   .footer {
     display: flex;
     align-items: center;

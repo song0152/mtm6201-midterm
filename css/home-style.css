@@ -1,36 +1,35 @@
 @media screen and (min-width: 960px) {
   body {
-    font-family: "Kanit", sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin: 0;
   }
 
-  button:hover {
+  .welcome button {
     animation: shake 1s ease infinite;
   }
 
   @keyframes shake {
-    30% { transform: scale(1.2); }
-    40%, 60% { transform: rotate(-20deg) scale(1.2); }
-    50% { transform: rotate(20deg) scale(1.2); }
-    70% { transform: rotate(0deg) scale(1.2); }
-    100% { transform: scale(1); }
+    from, to { transform: scale(1, 1); }
+    25% { transform: scale(0.9, 1.1); }
+    50% { transform: scale(1.1, 0.9); }
+    75% { transform: scale(0.95, 1.05); }
   }
 
   /* navbar style */
   .nav {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    margin-left: 8%;
   }
 
   .nav img {
     width: 115px;
-    margin-left: 60px;
   }
 
   .nav ul {
     list-style-type: none;
     overflow: hidden;
-    margin-right: 30px;
+    margin-left: 45%;
   }
 
   .nav li {
@@ -45,7 +44,7 @@
   }
 
   .nav li a:hover {
-    color: #619229;
+    color: #fa4a0c;
   } 
 
   /* welcome banner style */
@@ -57,75 +56,139 @@
 
   .welcome h1 {
     position: absolute;
-    top: 5%;
+    top: 31%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    font-size: 200%;
+    font-size: 5vw;
+    z-index: 2;
+    width: 100%;
   }
 
-  .welcome p {
+  .welcome p:nth-child(1) {
     position: absolute;
-    top: 270px;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    font-size: 20px;
+    font-size: 2vw;
+    z-index: 2;
+  }
+
+  .welcome p:nth-child(3) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 2vw;
+    z-index: 2;
   }
 
   .welcome img{
+    position: relative;
     width: 100vw;
     height: auto;
   }
 
-  .welcome .order{
+  .welcome::before {
+    content: ""; 
     position: absolute;
-    top: 420px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+  }
+
+  .welcome .playstore {
+    position: absolute;
+    top: 65%;
     left: 35%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: white;
-    border: none;
-    color: #619229;
+    background-color: transparent;
+    border: 1;
+    border-color: white;
+    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1.5vw;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 38px;
+    z-index: 3;
+    width: 15%;
   }
 
-  .welcome .learn{
+  .welcome .app{
     position: absolute;
-    top: 420px;
-    left: 65%;
+    top: 65%;
+    left: 55%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: white;
-    border: none;
-    color: #619229;
+    background-color: transparent;
+    border: 1;
+    border-color: white;
+    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1.5vw;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 38px;
+    z-index: 3;
+    width: 15%;
   }
 
-  .welcome .order:hover{
-    background-color: #619229;
-    color: aliceblue;
+  .welcome .playstore:hover{
+    background-color: #fa4a0c;
+    color: white;
+    border: none;
   }
 
-  .welcome .learn:hover{
-    background-color: #619229;
-    color: aliceblue;
+  .welcome .app:hover{
+    background-color: #fa4a0c;
+    color: white;
+    border: none;
+  }
+
+  .appimg {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 640px;
+  }
+
+  .phone1 {
+    position: absolute;
+    top: -23vw;
+    left: 50%; 
+    transform: translateX(-60%); 
+    width: 50%; 
+    height: auto;
+    width: 40%;
+    z-index: 4;
+  }
+
+  .phone2 {
+    position: absolute;
+    top: -5vw;
+    left: 50%; 
+    width: 50%;
+    height: auto;
+    width: 20%;
+    z-index: 4;
+    left: 50%; 
+    transform: translateX(0%);
   }
 
   /* Introduction part of the style, using the grid */
@@ -133,7 +196,7 @@
     color: rgb(65, 65, 65);
   }
 
-  .history h1{
+  .title h1{
     display: flex;
     justify-content: center ;
   }
@@ -143,17 +206,22 @@
     grid-template-columns: auto auto;
     place-items: center;
     width: 80%;
-    margin: auto;
+    margin-left: 2vw;
+    margin-right: 2vw;
   }
 
   .process img {
-    width: 270px;
+    width: 45vw;
   }
 
-  .process h2 {
-    text-align: center;
-    justify-self: center;
-    align-self: center;
+  .process p1 {
+    color: #fa4a0c;
+    font-size: 2vw;
+    font-weight: 500;
+  }
+
+  .process p2 {
+    font-size: 2vw;
   }
 
   .process .block:nth-child(1) {
@@ -187,12 +255,12 @@
   }
 
   /* purchase style */
-  .purchase {
+  .download {
     position: relative;
     display: inline-block;
   }
 
-  .purchase h1 {
+  .download h1 {
     position: absolute;
     top: 15%;
     left: 50%;
@@ -202,7 +270,7 @@
     font-size: 200%;
   }
 
-  .purchase p {
+  .download p {
     position: absolute;
     top: 35%;
     left: 50%;
@@ -212,79 +280,86 @@
     font-size: 20px;
   }
 
-  .purchase img{
+  .download img{
     width: 100vw;
     height: auto;
+    margin: 0;
   }
 
-  .purchase .card{
+  .download .playstore2 {
     position: absolute;
-    top: 55%;
+    top: 65%;
     left: 45%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: white;
-    border: none;
-    color: #619229;
+    background-color: transparent;
+    border: 1;
+    border-color: white;
+    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1.5vw;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 38px
+    border-radius: 38px;
+    z-index: 3;
+    width: 15%;
   }
 
-  .purchase .paypal{
+  .download .app2 {
     position: absolute;
-    top: 55%;
-    left: 55%;
+    top: 65%;
+    left: 65%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: white;
-    border: none;
-    color: #619229;
+    background-color: transparent;
+    border: 1;
+    border-color: white;
+    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1.5vw;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 38px
+    border-radius: 38px;
+    z-index: 3;
+    width: 15%;
   }
 
-  .purchase .card:hover{
-    background-color: #619229;
+  .download .playstore2:hover{
+    background-color: #fa4a0c;
     color: aliceblue;
+    border: none;
   }
 
-  .purchase .paypal:hover{
-    background-color: #619229;
+  .download .app2:hover{
+    background-color: #fa4a0c;
     color: aliceblue;
+    border: none;
   }
   
   /* footer style */
   .footer {
     display: flex;
     align-items: center;
-    margin-left: 18%;
+    margin-left: 13.8%;
   }
 
   .logo2 img {
-    width: 115px;
-    
+    width: 15vw;
   }
 
   .footer ul {
       list-style-type: none;
-      margin: 13.9%;
-      
+      margin: 13.9%;   
   }
 
   .social {
-    width: 25px;
+    width: 1.8vw;
   }
 
   .footer li {
@@ -297,8 +372,8 @@
     }
 
   small {
-    color: #619229;
-    font-size: 25px;
+    color: #fa4a0c;
+    font-size: 1vw;
   }
 }
 
@@ -306,26 +381,27 @@
 
 @media screen and (max-width: 960px) {
   body {
-    font-family: "Kanit", sans-serif;
-    margin: auto;
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
   }
 
-  button:hover {
+  .welcome button {
     animation: shake 1s ease infinite;
   }
 
   @keyframes shake {
-    30% { transform: scale(1.2); }
-    40%, 60% { transform: rotate(-20deg) scale(1.2); }
-    50% { transform: rotate(20deg) scale(1.2); }
-    70% { transform: rotate(0deg) scale(1.2); }
-    100% { transform: scale(1); }
+    from, to { transform: scale(1, 1); }
+    25% { transform: scale(0.9, 1.1); }
+    50% { transform: scale(1.1, 0.9); }
+    75% { transform: scale(0.95, 1.05); }
   }
 
   /* navbar style */
   .nav img {
+    position: relative;
     width: 115px;
-    margin-left: 60px;
+    margin-left: 13vw;
+    top: 127px;
   }
 
   .nav ul {
@@ -342,10 +418,10 @@
     color: black;
   }
 
-
   .nav li a:hover {
-    color: #619229;
+    color: #fa4a0c;
   } 
+
 
   /* welcome banner style */
   
@@ -356,100 +432,172 @@
 
   .welcome h1 {
     position: absolute;
-    top: 10%;
+    top: 31%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
+    font-size: 5vw;
+    z-index: 2;
+    width: 100%;
   }
 
-  .welcome p {
+  .welcome p:nth-child(1) {
     position: absolute;
-    top: 28%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
+    font-size: 2vw;
+    z-index: 2;
+  }
+
+  .welcome p:nth-child(3) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 2vw;
+    z-index: 2;
   }
 
   .welcome img{
+    position: relative;
     width: 100vw;
     height: auto;
   }
 
-  .welcome .order{
+  .welcome::before {
+    content: ""; 
     position: absolute;
-    top: 55%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+  }
+
+  .welcome .playstore {
+    position: absolute;
+    top: 65%;
     left: 35%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: white;
-    border: none;
-    color: #619229;
+    background-color: transparent;
+    border: 1;
+    border-color: white;
+    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1.5vw;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 38px
+    border-radius: 38px;
+    z-index: 3;
+    width: 15%;
   }
 
-  .welcome .learn{
+  .welcome .app{
     position: absolute;
-    top: 55%;
-    left: 65%;
+    top: 65%;
+    left: 55%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: white;
-    border: none;
-    color: #619229;
+    background-color: transparent;
+    border: 1;
+    border-color: white;
+    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1.5vw;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 38px
+    border-radius: 38px;
+    z-index: 3;
+    width: 15%;
   }
 
-  .welcome .order:hover{
-    background-color: #619229;
-    color: aliceblue;
+  .welcome .playstore:hover{
+    background-color: #fa4a0c;
+    color: white;
+    border: none;
   }
 
-  .welcome .learn:hover{
-    background-color: #619229;
-    color: aliceblue;
+  .welcome .app:hover{
+    background-color: #fa4a0c;
+    color: white;
+    border: none;
   }
 
- /* Introduction part of the style, using the grid */
+  .appimg {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 43vw;
+  }
+
+  .phone1 {
+    position: absolute;
+    top: -23vw;
+    left: 50%; 
+    transform: translateX(-60%); 
+    width: 50%; 
+    height: auto;
+    width: 40%;
+    z-index: 4;
+  }
+
+  .phone2 {
+    position: absolute;
+    top: -5vw;
+    left: 50%; 
+    width: 50%;
+    height: auto;
+    width: 20%;
+    z-index: 4;
+    left: 50%; 
+    transform: translateX(0%);
+  }
+
+  /* Introduction part of the style, using the grid */
   .introduce {
     color: rgb(65, 65, 65);
   }
 
-  .history h1{
+  .title h1{
     display: flex;
-    justify-content: center;
+    justify-content: center ;
   }
 
   .process {
     display: grid;
     grid-template-columns: auto auto;
-    width: 100vw;
     place-items: center;
-  }
-
-  .process h2 {
-    text-align: center;
-    justify-self: center;
-    align-self: center;
+    width: 75vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
   }
 
   .process img {
-    width: 60%;
+    width: 45vw;
+  }
+
+  .process p1 {
+    color: #fa4a0c;
+    font-size: 2vw;
+    font-weight: 500;
+  }
+
+  .process p2 {
+    font-size: 2vw;
   }
 
   .process .block:nth-child(1) {
@@ -483,104 +631,111 @@
   }
 
   /* purchase style */
-  .purchase {
+  .download {
     position: relative;
     display: inline-block;
   }
 
-  .purchase h1 {
+  .download h1 {
     position: absolute;
-    top: 15%;
+    top: 4vw;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    font-size: 200%;
+    font-size: 3vw;
   }
 
-  .purchase p {
+  .download p {
     position: absolute;
-    top: 35%;
+    top: 11vw;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    font-size: 20px;
+    font-size: 2vw;
   }
 
-  .purchase img{
+  .download img{
     width: 100vw;
     height: auto;
+    margin: 0;
   }
 
-  .purchase .card{
+  .download .playstore2 {
     position: absolute;
     top: 65%;
     left: 35%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: white;
-    border: none;
-    color: #619229;
+    background-color: transparent;
+    border: 1;
+    border-color: white;
+    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1.5vw;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 38px
+    border-radius: 38px;
+    z-index: 3;
+    width: 15%;
   }
 
-  .purchase .paypal{
+  .download .app2 {
     position: absolute;
     top: 65%;
     left: 65%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: white;
-    border: none;
-    color: #619229;
+    background-color: transparent;
+    border: 1;
+    border-color: white;
+    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1.5vw;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 38px
+    border-radius: 38px;
+    z-index: 3;
+    width: 15%;
   }
 
-  .purchase .card:hover{
-    background-color: #619229;
+  .download .playstore2:hover{
+    background-color: #fa4a0c;
     color: aliceblue;
+    border: none;
   }
 
-  .purchase .paypal:hover{
-    background-color: #619229;
+  .download .app2:hover{
+    background-color: #fa4a0c;
     color: aliceblue;
+    border: none;
   }
   
-
   /* footer style */
   .footer {
     display: flex;
     align-items: center;
-    margin-left: 18%;
+    margin-left: 13.8%;
   }
 
   .logo2 img {
-    width: 115px;
+    width: 15vw;
   }
 
   .footer ul {
       list-style-type: none;
-      margin: 13.9%;
-      
+      margin: 13.9%;   
   }
 
   .social {
-    width: 25px;
+    width: 1.8vw;
   }
 
   .footer li {
@@ -589,11 +744,12 @@
   
   .footer li a {
       display: block;
-      padding: 10px;
+      padding: 2vw;
     }
 
   small {
-    color: #619229;
+    color: #fa4a0c;
+    font-size: 1vw;
   }
 }
 

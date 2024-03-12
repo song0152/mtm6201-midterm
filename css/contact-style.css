@@ -19,36 +19,36 @@
 
     
     /* navbar style */
-  .nav {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .nav img {
-    width: 115px;
-    margin-left: 60px;
-  }
-
-  .nav ul {
-    list-style-type: none;
-    overflow: hidden;
-    margin-right: 30px;
-  }
-
-  .nav li {
-    float: left;
-  }
-
-  .nav li a {
-    display: block;
-    padding: 30px;
-    text-decoration: none;
-    color: black;
-  }
-
-  .nav li a:hover {
-    color: #619229;
-  } 
+    .nav {
+      display: flex;
+      align-items: center;
+      margin-left: 8%;
+    }
+  
+    .nav img {
+      width: 115px;
+    }
+  
+    .nav ul {
+      list-style-type: none;
+      overflow: hidden;
+      margin-left: 45%;
+    }
+  
+    .nav li {
+      float: left;
+    }
+  
+    .nav li a {
+      display: block;
+      padding: 30px;
+      text-decoration: none;
+      color: black;
+    }
+  
+    .nav li a:hover {
+      color: #fa4a0c;
+    }
 
 
   /* contact form style */
@@ -83,46 +83,48 @@
   .send,
   .clear {
     margin: 5%;
-    font-size: 20px;
-    padding: 3%;
+    font-size: 1.8vw;
+    width: 10vw;
     text-decoration: none;
-    border: none;
-    color: #caa064;
-    background-color: black;
+    border: 1;
+    background-color: transparent;
+    color: black;
+    border-color: black;
     border-radius: 28px;
   }
 
   .clear:hover {
     color: white;
-    background-color: #619229;
+    background-color: #fa4a0c;
+    border: none;
   }
 
   .send:hover {
     color: white;
-    background-color: #619229;
+    background-color: #fa4a0c;
+    border: none;
   }
 
 
 
-    /* footer style */
+   /* footer style */
   .footer {
     display: flex;
     align-items: center;
-    margin-left: 18%;
+    margin-left: 13.8%;
   }
 
   .logo2 img {
-    width: 115px;
+    width: 15vw;
   }
 
   .footer ul {
       list-style-type: none;
-      margin: 13.9%;
-      
+      margin: 13.9%;   
   }
 
   .social {
-    width: 25px;
+    width: 1.8vw;
   }
 
   .footer li {
@@ -131,11 +133,12 @@
   
   .footer li a {
       display: block;
-      padding: 10px;
+      padding: 30px;
     }
 
   small {
-    color: #619229;
+    color: #fa4a0c;
+    font-size: 1vw;
   }
 }
 
@@ -160,10 +163,12 @@
     }
 
     
-    /* navbar style */
+   /* navbar style */
   .nav img {
+    position: relative;
     width: 115px;
-    margin-left: 60px;
+    margin-left: 13vw;
+    top: 127px;
   }
 
   .nav ul {
@@ -180,9 +185,8 @@
     color: black;
   }
 
-
   .nav li a:hover {
-    color: #619229;
+    color: #fa4a0c;
   } 
 
 
@@ -218,46 +222,48 @@
   .send,
   .clear {
     margin: 5%;
-    font-size: 20px;
-    padding: 3%;
+    font-size: 1.8vw;
+    width: 10vw;
     text-decoration: none;
-    border: none;
-    color: #caa064;
-    background-color: black;
+    border: 1;
+    background-color: transparent;
+    color: black;
+    border-color: black;
     border-radius: 28px;
   }
 
   .clear:hover {
     color: white;
-    background-color: #619229;
+    background-color: #fa4a0c;
+    border: none;
   }
 
   .send:hover {
     color: white;
-    background-color: #619229;
+    background-color: #fa4a0c;
+    border: none;
   }
 
 
 
-    /* footer style */
+  /* footer style */
   .footer {
     display: flex;
     align-items: center;
-    margin-left: 18%;
+    margin-left: 13.8%;
   }
 
   .logo2 img {
-    width: 115px;
+    width: 15vw;
   }
 
   .footer ul {
       list-style-type: none;
-      margin: 13.9%;
-      
+      margin: 13.9%;   
   }
 
   .social {
-    width: 25px;
+    width: 1.8vw;
   }
 
   .footer li {
@@ -266,10 +272,11 @@
   
   .footer li a {
       display: block;
-      padding: 10px;
+      padding: 2vw;
     }
 
   small {
-    color: #619229;
+    color: #fa4a0c;
+    font-size: 1vw;
   }
 }
